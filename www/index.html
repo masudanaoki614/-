@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+//page1のボタンを押したとき
+      if (page.matches('#first-page')) {
+           page.querySelector('#push-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        };
+    }
+
+    //page2のボタンを押したとき
+       if (page.matches('#second-page')) {
+         //page２のボタンAが押されたときpage３に移動
+           page.querySelector('#push-button-a').onclick = function() {
+           document.querySelector('#navigator').pushPage('page3.html');
+         };
+ 
+          //page２のボタンBが押されたときpage4に移動
+         page.querySelector('#push-button-b').onclick = function() {
+           document.querySelector('#navigator').pushPage('page4.html');
+         };
+      }
+
+          //page3のボタンを押したとき
+       if (page.matches('#third-page')) {
+            page.querySelector('#push-button-a').onclick = function() {
+           document.querySelector('#navigator').pushPage('page5.html');
+         };
+           page.querySelector('#push-button-b').onclick = function() {
+           document.querySelector('#navigator').pushPage('page6.html');
+         };
+      }
+
+      //page4のボタンを押したとき
+       if (page.matches('#forth-page')) {
+
+ 
+
+         page.querySelector('#push-button-a').onclick = function() {
+           document.querySelector('#navigator').pushPage('page7.html');
+         };
+ 
+
+         page.querySelector('#push-button-b').onclick = function() {
+           document.querySelector('#navigator').pushPage('page8.html');
+         };
+      }
+
+       //page5のボタンを押したとき
+       if (page.matches('#five-page')) {
+
+ 
+
+         page.querySelector('#push-button-a').onclick = function() {
+           document.querySelector('#navigator').pushPage('page9.html');
+         };
+ 
+
+         page.querySelector('#push-button-b').onclick = function() {
+           document.querySelector('#navigator').pushPage('page10.html');
+         };
+      }
+       //page6のボタンを押したとき
+       if (page.matches('#six-page')) {
+
+ 
+
+         page.querySelector('#push-button-a').onclick = function() {
+           document.querySelector('#navigator').pushPage('page11.html');
+         };
+ 
+
+         page.querySelector('#push-button-b').onclick = function() {
+           document.querySelector('#navigator').pushPage('page12.html');
+         };
+      }
+       //page7のボタンを押したとき
+       if (page.matches('#seven-page')) {
+
+ 
+
+         page.querySelector('#push-button-a').onclick = function() {
+           document.querySelector('#navigator').pushPage('page13.html');
+         };
+ 
+
+         page.querySelector('#push-button-b').onclick = function() {
+           document.querySelector('#navigator').pushPage('page14.html');
+         };
+      }
+       //page8のボタンを押したとき
+       if (page.matches('#eight-page')) {
+
+ 
+
+         page.querySelector('#push-button-a').onclick = function() {
+           document.querySelector('#navigator').pushPage('page15.html');
+         };
+ 
+
+         page.querySelector('#push-button-b').onclick = function() {
+           document.querySelector('#navigator').pushPage('page16.html');
+         };
+      }
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+</head>
+<body>
+ //ons-navigatorはページを遷移させるためのパーツ
+  <ons-navigator id="navigator" page="page1.html"></ons-navigator>
+//page1の定義
+  <ons-template id="page1.html">
+    <ons-page id="first-page">
+      <ons-toolbar>
+        <div class="center">勝手に球技おすすめアプリ</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたにおすすめの球技を紹介します</p>
+        <ons-button id="push-button">開始</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+//page2の定義
+  <ons-template id="page2.html">
+    <ons-page id="second-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">チームプレーはお好きですかですか？</div>
+      </ons-toolbar>
+
+        <ons-button id="push-button-a">はい</ons-button>
+        <ons-button id="push-button-b">いいえ</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  //page3の定義
+  <ons-template id="page3.html">
+    <ons-page id="third-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">屋外と屋内どちらでやりたいですか？</div>
+      </ons-toolbar>
+
+        <ons-button id="push-button-a">屋外</ons-button>
+        <ons-button id="push-button-b">屋内</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+   //page4の定義
+  <ons-template id="page4.html">
+    <ons-page id="forth-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">屋外と屋内どちらでやりたいですか？</div>
+      </ons-toolbar>
+
+        <ons-button id="push-button-a">屋外</ons-button>
+        <ons-button id="push-button-b">屋内</ons-button>
+      </div>
+    </ons-page>
+    </ons-template>
+
+       //page5の定義
+  <ons-template id="page5.html">
+    <ons-page id="five-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">野球は好きですか？</div>
+      </ons-toolbar>
+
+        <ons-button id="push-button-a">はい</ons-button>
+        <ons-button id="push-button-b">いいえ</ons-button>
+      </div>
+    </ons-page>
+    </ons-template>
+
+         //page6の定義
+  <ons-template id="page6.html">
+    <ons-page id="six-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">バスケットボールは好きですか？</div>
+      </ons-toolbar>
+
+        <ons-button id="push-button-a">はい</ons-button>
+        <ons-button id="push-button-b">いいえ</ons-button>
+      </div>
+    </ons-page>
+    </ons-template>
+
+         //page7の定義
+  <ons-template id="page7.html">
+    <ons-page id="seven-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">テニスは好きですか？</div>
+      </ons-toolbar>
+
+        <ons-button id="push-button-a">はい</ons-button>
+        <ons-button id="push-button-b">いいえ</ons-button>
+      </div>
+    </ons-page>
+    </ons-template>
+
+         //page8の定義
+  <ons-template id="page8.html">
+    <ons-page id="eight-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">卓球は好きですか？</div>
+      </ons-toolbar>
+
+        <ons-button id="push-button-a">はい</ons-button>
+        <ons-button id="push-button-b">いいえ</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+     //page9の定義
+  <ons-template id="page9.html">
+    <ons-page id="nine-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">あなたにおすすめの球技は</div>
+      </ons-toolbar>
+       <div class="center">野球</div>  
+      </div>
+    </ons-page>
+  </ons-template>
+
+  //page10の定義
+  <ons-template id="page10.html">
+    <ons-page id="ten-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">あなたにおすすめの球技は</div>
+      </ons-toolbar>
+        <div class="center">サッカー</div>  
+      </div>
+    </ons-page>
+  </ons-template>
+
+  //page11の定義
+  <ons-template id="page11.html">
+    <ons-page id="eleven-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">あなたにおすすめの球技は</div>
+      </ons-toolbar>
+        <div class="center">バスケットボール</div>  
+      </div>
+    </ons-page>
+  </ons-template>
+
+    //page12の定義
+  <ons-template id="page10.html">
+    <ons-page id="twelve-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">あなたにおすすめの球技は</div>
+      </ons-toolbar>
+        <div class="center">バレーボール</div>  
+      </div>
+    </ons-page>
+  </ons-template>
+
+    //page13の定義
+  <ons-template id="page13.html">
+    <ons-page id="thirteen-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">あなたにおすすめの球技は</div>
+      </ons-toolbar>
+        <div class="center">テニス</div>  
+      </div>
+    </ons-page>
+  </ons-template>
+
+    //page14の定義
+  <ons-template id="page14.html">
+    <ons-page id="fourteen-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">あなたにおすすめの球技は</div>
+      </ons-toolbar>
+        <div class="center">ゴルフ</div>  
+      </div>
+    </ons-page>
+  </ons-template>
+
+    //page15の定義
+  <ons-template id="page15.html">
+    <ons-page id="fifteen-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">あなたにおすすめの球技は</div>
+      </ons-toolbar>
+        <div class="center">卓球</div>  
+      </div>
+    </ons-page>
+  </ons-template>
+
+    //page16の定義
+  <ons-template id="page16.html">
+    <ons-page id="sixteen-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">あなたにおすすめの球技は</div>
+      </ons-toolbar>
+        <div class="center">バドミントン</div>  
+      </div>
+    </ons-page>
+  </ons-template>
+</body>
+</html>
+
+
